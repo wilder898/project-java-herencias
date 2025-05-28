@@ -1,3 +1,4 @@
+import models.Chasis;
 import models.Motor;
 import models.Neumatico;
 import models.Transmision;
@@ -10,6 +11,8 @@ public class Main {
 
         Neumatico neumatico = new Neumatico("N001", "Michelin", 17, 32.5);
 
+        Chasis chasis = new Chasis("C001", "Toyota", "Monocasco", 250.0);
+
         System.out.println("==== MOTOR ====");
         motor.mostrarInformacion();
         motor.encenderMotor();
@@ -21,5 +24,9 @@ public class Main {
         System.out.println("\n==== NEUMÁTICO ====");
         neumatico.mostrarInformacion();
         neumatico.verificarPresion();
+
+        System.out.println("\n==== CHASIS ====");
+        chasis.mostrarInformacion();
+        chasis.calcularCargaMaxima();
     }
 }
